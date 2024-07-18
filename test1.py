@@ -1,3 +1,8 @@
+from selenium import webdriver
+
 print(" automation start PYTHON + GIT + JENKINS")
-print(" NEW line")
-print(" NEW line")
+
+holdChrome = webdriver.ChromeOptions()
+holdChrome.add_experimental_option("detach", True)   #Restrict auto close of chrome
+e = webdriver.Chrome(holdChrome)
+e.get("https://keepr.inoidsolutions.in/")
